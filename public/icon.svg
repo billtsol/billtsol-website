@@ -1,26 +1,47 @@
-<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    @media (prefers-color-scheme: light) {
-      .background { fill: black; }
-      .foreground { fill: white; }
-    }
-    @media (prefers-color-scheme: dark) {
-      .background { fill: white; }
-      .foreground { fill: black; }
-    }
-  </style>
-  <g clip-path="url(#clip0_7960_43945)">
-    <rect class="background" width="180" height="180" rx="37" />
-    <g style="transform: scale(95%); transform-origin: center">
-      <path class="foreground"
-        d="M101.141 53H136.632C151.023 53 162.689 64.6662 162.689 79.0573V112.904H148.112V79.0573C148.112 78.7105 148.098 78.3662 148.072 78.0251L112.581 112.898C112.701 112.902 112.821 112.904 112.941 112.904H148.112V126.672H112.941C98.5504 126.672 86.5638 114.891 86.5638 100.5V66.7434H101.141V100.5C101.141 101.15 101.191 101.792 101.289 102.422L137.56 66.7816C137.255 66.7563 136.945 66.7434 136.632 66.7434H101.141V53Z" />
-      <path class="foreground"
-        d="M65.2926 124.136L14 66.7372H34.6355L64.7495 100.436V66.7372H80.1365V118.47C80.1365 126.278 70.4953 129.958 65.2926 124.136Z" />
-    </g>
-  </g>
-  <defs>
-    <clipPath id="clip0_7960_43945">
-      <rect width="180" height="180" fill="white" />
-    </clipPath>
-  </defs>
-</svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32"
+   height="31.999998"
+   viewBox="0 0 8.4666667 8.4666661"
+   version="1.1"
+   id="svg1"
+   xml:space="preserve"
+   sodipodi:docname="favicon.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview1"
+     pagecolor="#0a2540"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:export-bgcolor="#0a2540ff"
+     inkscape:zoom="25.406252"
+     inkscape:cx="15.999999"
+     inkscape:cy="15.999999"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" /><defs
+     id="defs1" /><g
+     id="layer1"
+     transform="translate(-32.051369,-83.427826)"><rect
+       style="opacity:1;fill:#0a2540;fill-opacity:1;stroke-width:0.100433"
+       id="rect1"
+       width="8.4666662"
+       height="8.4666662"
+       x="32.051369"
+       y="83.427826"
+       ry="0.96386331" /><path
+       style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.0518015"
+       d="m 38.084325,85.031144 c -5e-5,2.680751 -2.745825,4.167229 -5.009401,5.498501 0.245237,-1.430512 1.414521,-2.612293 2.644257,-3.489033 0.801212,-0.571223 1.915309,-1.14973 2.335763,-2.009468 h 0.02938 m 1.601246,4.091905 c -0.248552,0.267443 -0.765729,0.451345 -1.116466,0.598794 -1.471632,0.618675 -3.012657,0.500908 -4.598071,0.500908 0.692226,-0.466169 1.680513,-0.926824 2.556118,-1.032919 1.041178,-0.12616 2.112456,0.06102 3.158419,-0.06678 z"
+       id="path1" /></g></svg>
