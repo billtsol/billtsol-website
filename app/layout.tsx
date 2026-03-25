@@ -75,7 +75,11 @@ export const metadata: Metadata = {
     images: [`${siteUrl}/opengraph-image`],
   },
   icons: {
-    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/favicon.ico", type: "image/x-icon" },
+    ],
   },
   formatDetection: {
     telephone: true,

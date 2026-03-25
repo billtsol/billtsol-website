@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.billtsol.com
+
+# Sitemaps
+Sitemap: https://www.billtsol.com/sitemap.xml
