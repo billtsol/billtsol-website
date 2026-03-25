@@ -56,7 +56,7 @@ export function AboutSection() {
                   <div className="text-xs text-muted-foreground">
                     {stat.label}
                   </div>
-                  <div className="text-xs text-muted-foreground/60">
+                  <div className="text-xs text-muted-foreground">
                     {stat.sublabel}
                   </div>
                 </div>

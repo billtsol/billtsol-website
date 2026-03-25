@@ -142,7 +142,7 @@ export function ProjectsSection() {
             href="https://github.com/billtsol"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary hover:underline"
+            className="text-primary underline hover:no-underline"
           >
             github.com/billtsol
           </a>
@@ -248,9 +248,10 @@ export function ProjectsSection() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`View ${project.title} source code on GitHub`}
                     className="p-2 rounded-lg hover:bg-primary/10 transition-colors"
                   >
-                    <Github className="w-4 h-4 md:w-5 md:h-5 text-muted-foreground hover:text-primary" />
+                    <Github className="w-4 h-4 md:w-5 md:h-5 text-muted-foreground hover:text-primary" aria-hidden="true" />
                   </a>
                 </div>
 
