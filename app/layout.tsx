@@ -1,56 +1,99 @@
-import type { Metadata } from 'next'
-import { Space_Grotesk, JetBrains_Mono } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import { ThemeProvider } from '@/components/theme-provider'
-import './globals.css'
+import type { Metadata } from "next";
+import { Space_Grotesk, JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { ThemeProvider } from "@/components/theme-provider";
+import { JsonLd } from "@/components/json-ld";
+import {
+  getSiteUrl,
+  SITE_DESCRIPTION,
+  SITE_HANDLE,
+  SITE_KEYWORDS,
+  SITE_NAME,
+  SITE_TITLE,
+} from "@/lib/site-config";
+import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({ 
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: '--font-sans'
+  variable: "--font-sans",
 });
 
-const jetbrainsMono = JetBrains_Mono({ 
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  variable: '--font-mono'
+  variable: "--font-mono",
 });
+
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
-  title: 'Vasileios Tsolakidis | Robotics & Embedded Systems Engineer',
-  description: 'Pioneer of Autonomous Systems & Scalable Intelligence. Robotics & Embedded Systems Engineer specializing in computer vision, PID control, and microservices.',
-  keywords: ['Robotics', 'Embedded Systems', 'Computer Vision', 'PID Control', 'ESP32', 'Arduino', 'Machine Learning', 'Microservices'],
-  authors: [{ name: 'Vasileios Tsolakidis' }],
-  openGraph: {
-    title: 'Vasileios Tsolakidis | Robotics Engineer',
-    description: 'Pioneer of Autonomous Systems & Scalable Intelligence',
-    type: 'website',
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: SITE_TITLE,
+    template: `%s | ${SITE_NAME}`,
   },
-  icons: {
-    icon: [
+  description: SITE_DESCRIPTION,
+  keywords: [...SITE_KEYWORDS],
+  authors: [{ name: SITE_NAME, url: siteUrl }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
+  applicationName: SITE_NAME,
+  category: "technology",
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteUrl,
+    siteName: SITE_NAME,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: `${SITE_NAME} — ${SITE_HANDLE} | Robotics & Embedded Systems Engineer`,
       },
     ],
-    apple: '/apple-icon.png',
   },
-}
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: [`${siteUrl}/opengraph-image`],
+  },
+  icons: {
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+  },
+  formatDetection: {
+    telephone: true,
+    email: true,
+  },
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans antialiased`}>
+      <body
+        className={`${spaceGrotesk.variable} ${jetbrainsMono.variable} font-sans antialiased`}
+      >
+        <JsonLd />
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -62,5 +105,5 @@ export default function RootLayout({
         <Analytics />
       </body>
     </html>
-  )
+  );
 }

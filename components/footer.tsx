@@ -16,9 +16,17 @@ export function Footer() {
                 VT
               </span>
             </div>
-            <span className="text-sm md:text-base font-semibold text-foreground">
-              Vasileios Tsolakidis
-            </span>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-0.5 sm:gap-2 text-center sm:text-left">
+              <span className="text-sm md:text-base font-semibold text-foreground">
+                Vasileios Tsolakidis
+              </span>
+              <span
+                className="text-xs text-muted-foreground font-mono"
+                aria-label="Online handle billtsol"
+              >
+                @billtsol
+              </span>
+            </div>
           </div>
 
           {/* Social Links */}
