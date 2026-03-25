@@ -9,10 +9,10 @@ const skillCategories = [
     icon: Cpu,
     color: "from-cyan-500 to-blue-500",
     skills: [
-      { name: "ESP32/Arduino (C/C++)", level: 95 },
-      { name: "PID Control & Motor Systems", level: 90 },
-      { name: "Computer Vision (YOLO/OpenCV)", level: 85 },
-      { name: "Circuit & PCB Design (KiCad)", level: 90 },
+      { name: "ESP32/Arduino (C/C++)", level: 70, label: "Advanced" },
+      { name: "PID Control & Motor Systems", level: 75, label: "Practical" },
+      { name: "Computer Vision (YOLO/OpenCV)", level: 45, label: "Basics" },
+      { name: "Circuit & PCB Design (KiCad)", level: 55, label: "Basics" },
     ],
   },
   {
@@ -20,11 +20,11 @@ const skillCategories = [
     icon: Code2,
     color: "from-emerald-500 to-teal-500",
     skills: [
-      { name: "Python / Java / C++", level: 92 },
-      { name: "JavaScript/TypeScript & React", level: 90 },
-      { name: "Spring Boot / Django / Node.js", level: 85 },
-      { name: "Docker & Kubernetes", level: 88 },
-      { name: "REST APIs & Microservices", level: 90 },
+      { name: "Python / Java / C++", level: 70, label: "Practical" },
+      { name: "JavaScript/TypeScript & React", level: 80, label: "Advanced" },
+      { name: "Spring Boot / Django / Node.js", level: 65, label: "Practical" },
+      { name: "Docker & Kubernetes", level: 60, label: "Basics" },
+      { name: "REST APIs & Microservices", level: 75, label: "Practical" },
     ],
   },
 ];
@@ -97,7 +97,7 @@ export function SkillsSection() {
                         {skill.name}
                       </span>
                       <span className="text-primary font-mono">
-                        {skill.level}%
+                        {skill.label}
                       </span>
                     </div>
                     <Progress value={skill.level} className="h-1.5" />
