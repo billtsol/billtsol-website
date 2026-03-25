@@ -84,23 +84,26 @@ export function Navigation() {
               href="https://github.com/billtsol"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub profile (opens in new tab)"
               className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
             >
-              <Github className="w-4 h-4 md:w-5 md:h-5" />
+              <Github className="w-4 h-4 md:w-5 md:h-5" aria-hidden="true" />
             </a>
             <a
               href="https://linkedin.com/in/vasileios-tsolakidis"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn profile (opens in new tab)"
               className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
             >
-              <Linkedin className="w-4 h-4 md:w-5 md:h-5" />
+              <Linkedin className="w-4 h-4 md:w-5 md:h-5" aria-hidden="true" />
             </a>
             <a
               href="mailto:billtsol1@gmail.com"
+              aria-label="Send email to billtsol1@gmail.com"
               className="p-2 rounded-lg text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
             >
-              <Mail className="w-4 h-4 md:w-5 md:h-5" />
+              <Mail className="w-4 h-4 md:w-5 md:h-5" aria-hidden="true" />
             </a>
           </div>
 
@@ -111,11 +114,12 @@ export function Navigation() {
               size="icon"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="rounded-lg w-8 h-8 md:w-9 md:h-9"
+              aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
             >
               {theme === "dark" ? (
-                <Sun className="h-4 w-4 md:h-5 md:w-5" />
+                <Sun className="h-4 w-4 md:h-5 md:w-5" aria-hidden="true" />
               ) : (
-                <Moon className="h-4 w-4 md:h-5 md:w-5" />
+                <Moon className="h-4 w-4 md:h-5 md:w-5" aria-hidden="true" />
               )}
             </Button>
           )}
@@ -126,18 +130,23 @@ export function Navigation() {
             size="icon"
             className="lg:hidden w-8 h-8 md:w-9 md:h-9"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
           >
-            {isMobileMenuOpen ? <X className="h-4 w-4 md:h-5 md:w-5" /> : <Menu className="h-4 w-4 md:h-5 md:w-5" />}
+            {isMobileMenuOpen ? <X className="h-4 w-4 md:h-5 md:w-5" aria-hidden="true" /> : <Menu className="h-4 w-4 md:h-5 md:w-5" aria-hidden="true" />}
           </Button>
         </div>
       </nav>
 
       {/* Mobile Menu */}
       <div
+        id="mobile-menu"
         className={cn(
           "lg:hidden absolute top-full left-0 right-0 glass overflow-hidden transition-all duration-300",
           isMobileMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         )}
+        aria-hidden={!isMobileMenuOpen}
       >
         <div className="container mx-auto px-4 py-4 md:py-6 flex flex-col gap-2 md:gap-4">
           {navLinks.map((link) => (
@@ -154,23 +163,26 @@ export function Navigation() {
               href="https://github.com/billtsol"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub profile (opens in new tab)"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              <Github className="w-5 h-5" />
+              <Github className="w-5 h-5" aria-hidden="true" />
             </a>
             <a
               href="https://linkedin.com/in/vasileios-tsolakidis"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn profile (opens in new tab)"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              <Linkedin className="w-5 h-5" />
+              <Linkedin className="w-5 h-5" aria-hidden="true" />
             </a>
             <a
               href="mailto:billtsol1@gmail.com"
+              aria-label="Send email to billtsol1@gmail.com"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              <Mail className="w-5 h-5" />
+              <Mail className="w-5 h-5" aria-hidden="true" />
             </a>
           </div>
         </div>

@@ -217,9 +217,10 @@ export function HeroSection() {
         <div className="absolute bottom-6 md:bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
           <button
             onClick={scrollToAbout}
+            aria-label="Scroll down to About section"
             className="p-2 rounded-full glass hover:bg-primary/10 transition-colors"
           >
-            <ArrowDown className="w-5 h-5 md:w-6 md:h-6 text-primary" />
+            <ArrowDown className="w-5 h-5 md:w-6 md:h-6 text-primary" aria-hidden="true" />
           </button>
         </div>
       </div>

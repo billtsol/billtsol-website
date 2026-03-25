@@ -93,14 +93,18 @@ export function SkillsSection() {
                 {category.skills.map((skill, i) => (
                   <div key={i} className="space-y-1.5">
                     <div className="flex justify-between text-sm">
-                      <span className="text-muted-foreground">
+                      <span className="text-muted-foreground" id={`skill-label-${index}-${i}`}>
                         {skill.name}
                       </span>
                       <span className="text-primary font-mono">
                         {skill.label}
                       </span>
                     </div>
-                    <Progress value={skill.level} className="h-1.5" />
+                    <Progress
+                      value={skill.level}
+                      className="h-1.5"
+                      aria-label={`${skill.name}: ${skill.label} (${skill.level}%)`}
+                    />
                   </div>
                 ))}
               </div>
